@@ -1,8 +1,14 @@
-import './App.css';
+import "./App.css";
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
+import Navbar from "./componentes/navbar/navbar";
+
 
 function App() {
   return (
-   <h1>Bienvenidos al curso</h1>
+    <>
+      <Navbar />
+      <ItemListContainer greetings="Bienvenido usuario" />
+    </>
   );
 };
 
