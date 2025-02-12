@@ -1,0 +1,21 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    background-color: rgb(167, 21, 21);
+    height: 5rem;
+}
+
+.nav-bar li {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-bar ul {
+    font-size: 1.1rem;
+    font-family: cursive;
+}

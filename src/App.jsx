@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ItemListContainer greetings="Bienvenido usuario" />
+      <ItemListContainer greetings="¡Bienvenido! Pide tu pizza favorita y recíbela en minutos." />
     </>
   );
 };
