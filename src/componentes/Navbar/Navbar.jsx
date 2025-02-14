@@ -5,13 +5,15 @@ function Navbar() {
     return (
         <header>
             <nav className="nav-bar">
+                <p>LOGO</p>
+                
+                <ul className="navbar-list">
+                    <li>INICIO</li>
+                    <li>PRODUCTOS</li>
+                    <li>CONTACTO</li>
+                </ul>
+                
                 <CartWidget />
-                <li>
-                    <ul>INICIO</ul>
-                    <ul>PRODUCTOS</ul>
-                    <ul>EXTRAS</ul>
-                    <ul>CARRITO</ul>
-                </li>
             </nav>
         </header>
     );

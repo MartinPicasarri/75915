@@ -2,7 +2,6 @@ import "./App.css";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import Navbar from "./componentes/navbar/navbar";
 
-
 function App() {
   return (
     <>

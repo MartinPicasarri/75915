@@ -1,8 +1,11 @@
 import "./CartWidget.css";
+import { IoMdCart } from "react-icons/io";
 
 function CartWidget() {
     return (
-        <p>Icono carrito (1)</p>
+        <div className="icono"> 
+        <p><IoMdCart />(0)</p>
+        </div>
     );
 };
 

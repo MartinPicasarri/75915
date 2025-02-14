@@ -4,18 +4,24 @@ body {
 }
 
 .nav-bar {
-    display: grid;
-    grid-template-columns: 15% 85%;
-    background-color: rgb(167, 21, 21);
-    height: 5rem;
-}
-
-.nav-bar li {
     display: flex;
-    justify-content: space-evenly;
+    background-color: rgb(167, 21, 21);
+    height: 7rem;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.nav-bar ul {
-    font-size: 1.1rem;
-    font-family: cursive;
+.navbar-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
 }
+
+.navbar-list li {
+    font-family: cursive;
+    font-size: 1.1rem;
+}
+
+
