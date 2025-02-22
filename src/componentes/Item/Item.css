@@ -2,9 +2,17 @@
     text-align: center;
     background-color: white;
     border: solid red 0.5rem;
-    width: 10rem;
-    height: 15rem;
+    width: 12rem;
+    height: 17rem;
     margin-top: 2rem;
+}
+
+.card h2 {
+    height: 3rem;
+}
+
+.card p {
+    font-size: 1.5rem;
 }
 
 .card button {

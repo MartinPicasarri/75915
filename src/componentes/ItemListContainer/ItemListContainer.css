@@ -16,3 +16,15 @@ h1 {
     display: flex;
     justify-content: space-around;
 }
+
+.boton-filtro {
+    display: flex;
+    place-content: space-evenly;
+}
+
+.boton-filtro button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 2rem;
+    font-size: 1rem;
+}
