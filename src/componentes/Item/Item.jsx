@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import "./Item.css";
 
 function Item ({nombre = "", descripcion = "", precio = 0}) {
@@ -9,7 +10,12 @@ function Item ({nombre = "", descripcion = "", precio = 0}) {
             <h2>{nombre}</h2>
             <p>{descripcion}</p>
             <p>${precio}</p>
-            <button onClick={agregarAlCarrito}>Agregar al carrito</button>
+            <button disabled={!nombre} className="card-btn" onClick={() => agregarAlCarrito()}>Agregar al carrito</button>
+            <Link to={`/detalle/${id}`}>
+                <button disabled={!nombre} className="card-btn">
+                    Ver detalle
+                </button>
+            </Link>
         </div>
     );
 }

@@ -5,6 +5,7 @@ export const productos = [
         descripcion: "Pizza con mozzarella y aceitunas",
         precio: 10000,
         img: "",
+        categoria: "pizzas",
     },
 
     {
@@ -13,6 +14,7 @@ export const productos = [
         descripcion: "Pizza con mozzarella, aceitunas y tomate",
         precio: 11000,
         img: "",
+        categoria: "pizzas",
     },
 
     {
@@ -21,6 +23,7 @@ export const productos = [
         descripcion: "Pizza con mozzarella, jamon y morron",
         precio: 14000,
         img: "",
+        categoria: "pizzas",
     },
 
     {
@@ -29,6 +32,7 @@ export const productos = [
         descripcion: "Pizza con salsa de tomate, anchoas y aceitunas negras",
         precio: 18000,
         img: "",
+        categoria: "pizzas",
     },
 
     {
@@ -37,29 +41,33 @@ export const productos = [
         descripcion: "Pizza con cebolla, mozzarella y aceitunas negras",
         precio: 14000,
         img: "",
+        categoria: "pizzas",
     },
 
     {
         id: 6,
-        nombre: "Pizza 4 Quesos",
-        descripcion: "Pizza con mozzarella, queso azul, queso parmesano y queso roquefort",
-        precio: 14500,
+        nombre: "Empanadas de jamon y queso",
+        descripcion: "",
+        precio: 1200,
         img: "",
+        categoria: "empanadas",
     },
 
     {
         id: 7,
-        nombre: "Pizza Margarita",
-        descripcion: "Pizza con mozzarella, tomate y albahaca",
-        precio: 15500,
+        nombre: "Empanadas de carne",
+        descripcion: "",
+        precio: 1200,
         img: "",
+        categoria: "empanadas",
     },
 
     {
         id: 8,
-        nombre: "Pizza Jamon Crudo y Rucula",
-        descripcion: "Pizza con mozzarella, jamon crudo y rucula",
-        precio: 22000,
-        img: "",    
+        nombre: "Empanasa de pollo",
+        descripcion: "",
+        precio: 1200,
+        img: "",  
+        categoria: "empanadas",  
     },
 ];
