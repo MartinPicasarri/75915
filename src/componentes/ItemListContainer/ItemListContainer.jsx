@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import { fetchData } from '../../fetchData';
-import Item from '../Item/Item';
-import Loader from '../Loader/Loader';
-import ItemDetail from '../ItemDetail/ItemDetail';
-import './ItemListContainer.css';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { fetchData } from "../../fetchData";
+import Item from "../Item/Item";
+import Loader from "../Loader/Loader";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import "./ItemListContainer.css";
+import { useParams } from "react-router-dom";
 
-function ItemListContainer({greetings}) {
+function ItemListContainer() {
 
     const [todosLosProductos, setTodosLosProductos] = useState([]);
     const [misProductos, setMisProductos] = useState([]); 

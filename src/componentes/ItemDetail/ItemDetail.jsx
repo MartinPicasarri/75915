@@ -1,8 +1,8 @@
-import { Link, useParams } from 'react-router-dom';
-import './ItemDetail.css';
-import { useEffect, useState } from 'react';
-import { fetchData } from '../../fetchData';
-import Loader from '../Loader/Loader';
+import { Link, useParams } from "react-router-dom";
+import "./ItemDetail.css";
+import { useEffect, useState } from "react";
+import { fetchData } from "../../fetchData";
+import Loader from "../Loader/Loader";
 
 function ItemDetail() {
 
@@ -26,10 +26,10 @@ function ItemDetail() {
         !detalle ? <Loader />
             :
             <div className="card-detail">
-                <h2>{detalle.nombre || "NO DISPONIBLE"}</h2>
-                <h3>Precio: ${detalle.precio || "SIN PRECIO"}</h3>
+                <h2>{detalle.nombre}</h2>
+                <h3>Precio: ${detalle.precio}</h3>
                 <p>Descripción: {detalle.descripcion}</p>
-                <button disabled={detalle.stock === 0} className="card-detail-btn" onClick={() => agregarAlCarrito()}>Agregar al carrito</button>
+                <button disabled className="card-detail-btn" onClick={() => agregarAlCarrito()}>Agregar al carrito</button>
                 <Link to="/">
                     <button className="card-detail-btn">Volver al inicio</button>
                 </Link>

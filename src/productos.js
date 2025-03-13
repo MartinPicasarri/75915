@@ -64,7 +64,7 @@ export const productos = [
 
     {
         id: 8,
-        nombre: "Empanasa de pollo",
+        nombre: "Empanadas de pollo",
         descripcion: "",
         precio: 1200,
         img: "",  
