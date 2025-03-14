@@ -11,17 +11,17 @@ function Navbar() {
                 <ul className="navbar-list">
                     <li className="nav-bar-item">
                         <Link to="/">
-                            Productos
+                            PRODUCTOS
                         </Link>
                     </li>
                     <li className="nav-bar-item">
                         <Link to="/categoria/pizzas">
-                            Pizzas
+                            PIZZAS
                         </Link>
                     </li>
                     <li className="nav-bar-item">
                         <Link to="/categoria/empanadas">
-                            Empanadas
+                            EMPANADAS
                         </Link>
                     </li>
                 </ul>

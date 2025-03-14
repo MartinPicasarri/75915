@@ -46,7 +46,7 @@ function ItemListContainer() {
                     loading ? <Loader /> :
                         misProductos.map((el, index) => {
                             return (
-                                <Item key={index} nombre={el.nombre} precio={el.precio} />
+                                <Item key={index} id={el.id} nombre={el.nombre} precio={el.precio} />
                             );
                         })
                 }

@@ -1,0 +1,60 @@
+.body-detail {
+    background-image: url(/src/Images/MIMUOPI´S-LOGO.png);
+    background-repeat: round;
+    height: 30rem;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+.body-detail {
+    animation: appear 0.5s forwards; 
+}
+
+.card-detail {
+    text-align: center;
+}
+
+.card-detail h2 {
+    font-size: 2rem;
+    font-family: monospace;
+    text-decoration: underline;
+}
+
+.card-detail h3 {
+    font-size: 1.5rem;
+}
+
+.card-detail p {
+    font-family: sans-serif;
+}
+
+.card-detail h2:hover {
+    transform: scale(1.2);
+}
+
+.card-detail h3:hover {
+    transform: scale(1.2);
+}
+
+.card-detail p:hover {
+    transform: scale(1.2);
+}
+
+.card-detail-btn {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    height: 2.3rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+    font-family: monospace;
+}
