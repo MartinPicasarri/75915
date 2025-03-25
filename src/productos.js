@@ -5,6 +5,7 @@ export const productos = [
         descripcion: "Pizza con mozzarella y aceitunas",
         precio: 10000,
         img: "",
+        stock: 5,
         categoria: "pizzas",
     },
 
@@ -14,6 +15,7 @@ export const productos = [
         descripcion: "Pizza con mozzarella, aceitunas y tomate",
         precio: 11000,
         img: "",
+        stock: 5,
         categoria: "pizzas",
     },
 
@@ -23,6 +25,7 @@ export const productos = [
         descripcion: "Pizza con mozzarella, jamon y morron",
         precio: 14000,
         img: "",
+        stock: 5,
         categoria: "pizzas",
     },
 
@@ -32,6 +35,7 @@ export const productos = [
         descripcion: "Pizza con salsa de tomate, anchoas y aceitunas negras",
         precio: 18000,
         img: "",
+        stock: 5,
         categoria: "pizzas",
     },
 
@@ -41,6 +45,7 @@ export const productos = [
         descripcion: "Pizza con cebolla, mozzarella y aceitunas negras",
         precio: 14000,
         img: "",
+        stock: 5,
         categoria: "pizzas",
     },
 
@@ -50,6 +55,7 @@ export const productos = [
         descripcion: "",
         precio: 1200,
         img: "",
+        stock: 12,
         categoria: "empanadas",
     },
 
@@ -59,6 +65,7 @@ export const productos = [
         descripcion: "",
         precio: 1200,
         img: "",
+        stock: 12,
         categoria: "empanadas",
     },
 
@@ -68,6 +75,7 @@ export const productos = [
         descripcion: "",
         precio: 1200,
         img: "",  
+        stock: 12,
         categoria: "empanadas",  
     },
 ];

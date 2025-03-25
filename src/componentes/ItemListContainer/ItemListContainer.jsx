@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import { fetchData } from "../../fetchData";
-import Item from "../Item/Item";
-import Loader from "../Loader/Loader";
-import ItemDetail from "../ItemDetail/ItemDetail";
-import "./ItemListContainer.css";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { fetchData } from '../../fetchData';
+import Item from '../Item/Item';
+import Loader from '../Loader/Loader';
+// import ItemDetail from '../ItemDetail/ItemDetail';
+import './ItemListContainer.css';
+import { useParams } from 'react-router-dom';
 
 function ItemListContainer() {
 
-    const [todosLosProductos, setTodosLosProductos] = useState([]);
-    const [misProductos, setMisProductos] = useState([]); 
+    const [todosLosProductos, setTodosLosProductos] = useState([]); // Este estado solo me va a servir como una especie de base de datos local en mi proyecto para no tener que seguir solicitando infinitas veces de acuerdo a los filtros que aplique. Si aplico el filtro de no mostrar productos, eventualmente puedo perder esa información. Así que acá tenemos un backup
+    const [misProductos, setMisProductos] = useState([]); // Los productos que vamos a mostrar
     const [loading, setLoading] = useState(true);
 
     const { categoria } = useParams();
@@ -41,8 +41,8 @@ function ItemListContainer() {
 
     return (
         <>
-            <div className="contenedor-cards">
-            {
+            <div className="container-cards">
+                {
                     loading ? <Loader /> :
                         misProductos.map((el, index) => {
                             return (
