@@ -28,27 +28,21 @@ function ItemDetail() {
         loader ? <Loader />
             :
             detalle ? 
+            <div className="body-detail">
             <div className="card-detail">
                 <h2>{detalle.nombre || "NO DISPONIBLE"}</h2>
                 <h3>Precio: ${detalle.precio || "SIN PRECIO"}</h3>
-                <p>Descripción: {detalle.descripcion}</p>
-                {
-                    detalle.oferta && <p><b>PRODUCTO EN OFERTA</b></p>
-                }
-                {
-                    detalle.stock > 0 ?
+                <p>{detalle.descripcion}</p>
                     <>
-                        <p>Quedan {detalle.stock} unidades</p>
-                        <Contador stock={detalle.stock} />
+                        <Contador />
                     </>
-                        :
-                        <p>Producto agotado!</p>
-                }
+                       
                 <button disabled={detalle.stock === 0} className="card-detail-btn" onClick={() => agregarAlCarrito({ id: detalle.id, nombre: detalle.nombre, precio: detalle.precio, cantidad: contador })}>Agregar al carrito</button>
                 <Link to="/">
                     <button className="card-detail-btn">Volver al inicio</button>
                 </Link>
             </div>
+        </div>
             :
             <p>Producto no encontrado con el id {id}</p>
     );

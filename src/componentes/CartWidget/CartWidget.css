@@ -1,4 +1,9 @@
 .icono p {
     font-size: 1.5rem;
     width: 6rem;
+    color: white;
+}
+
+.icono p:hover {
+    color: black;
 }

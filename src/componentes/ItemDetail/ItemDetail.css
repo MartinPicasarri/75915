@@ -58,3 +58,11 @@
     margin-right: 2rem;
     font-family: monospace;
 }
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+

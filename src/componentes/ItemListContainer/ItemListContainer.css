@@ -1,18 +1,4 @@
-h1 {
-    width: 56rem;
-    font-family: monospace;
-    text-wrap: nowrap;
-    overflow: hidden;
-    animation: typing 5s steps(50) infinite alternate-reverse;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-}
-
-.contenedor-cards {
+.container-cards {
     display: flex;
     justify-content: space-around;
 }

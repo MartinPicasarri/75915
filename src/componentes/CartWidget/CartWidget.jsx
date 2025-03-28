@@ -9,7 +9,9 @@ function CartWidget() {
 
     return (
         <Link to="/cart"> 
-            <p><IoMdCart />(0)</p>
+            <div className='icono'>
+                <p><IoMdCart />()</p>
+            </div>
         </Link>
     );
 };
