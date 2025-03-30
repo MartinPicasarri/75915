@@ -1,0 +1,27 @@
+.orden {
+    padding: 20px;
+    width: 20rem;
+    place-self: center;
+}
+
+.orden form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.orden form input {
+    height: 2.3rem;
+}
+
+.orden form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}

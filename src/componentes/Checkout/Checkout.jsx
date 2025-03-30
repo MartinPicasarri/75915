@@ -1,21 +1,41 @@
-
 import { useState } from 'react';
 import { useAppContext } from '../../context/context';
 import './Checkout.css';
 import { useNavigate } from 'react-router-dom';
 
 function Checkout() {
-
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         nombre: "",
-        correo: "",
+        ubicacion: "",
+        telefono: "",
+    });
+
+    const [errors, setErrors] = useState({
+        nombre: "",
+        ubicacion: "",
         telefono: "",
     });
 
     const modificarInput = (e) => {
         const { value, name } = e.target;
+        
+        setErrors({
+            ...errors,
+            [name]: ""
+        });
+
+        if (name === 'telefono') {
+            if (!/^\d*$/.test(value)) {
+                setErrors({
+                    ...errors,
+                    telefono: "Solo se permiten números"
+                });
+                return;
+            }
+        }
+
         setFormData({
             ...formData,
             [name]: value,
@@ -24,27 +44,93 @@ function Checkout() {
 
     const crearOrden = (e) => {
         e.preventDefault();
+        let hasErrors = false;
+        const newErrors = {
+            nombre: "",
+            ubicacion: "",
+            telefono: ""
+        };
+
+        if (!formData.nombre.trim()) {
+            newErrors.nombre = "El nombre es obligatorio";
+            hasErrors = true;
+        }
+
+        if (!formData.ubicacion.trim()) {
+            newErrors.ubicacion = "La ubicación es obligatoria";
+            hasErrors = true;
+        }
+
+        if (!formData.telefono.trim()) {
+            newErrors.telefono = "El teléfono es obligatorio";
+            hasErrors = true;
+        } else if (formData.telefono.length !== 10) {
+            newErrors.telefono = "El teléfono debe tener 10 dígitos";
+            hasErrors = true;
+        }
+
+        setErrors(newErrors);
+
+        if (hasErrors) {
+            return;
+        }
+
         console.log("Orden creada", formData);
+        
         setFormData({
             nombre: "",
-            correo: "",
+            ubicacion: "",
             telefono: "",
         });
 
-        setTimeout(() => {
-            navigate("/");
-        }, 1000);
+        window.location.href = '/';
     };
 
     return (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div className='orden'>
             <form onSubmit={crearOrden}>
-                <input type="text" placeholder='Nombre' name="nombre" value={formData.nombre} onChange={modificarInput} />
-                <input type="text" placeholder='Correo' name="correo" value={formData.correo} onChange={modificarInput} />
-                <input type="text" placeholder='Teléfono' name="telefono" value={formData.telefono} onChange={modificarInput} />
-                <input type="submit" value="Enviar" />
-            </form>
-        </div >
+                <h2>REGISTRO</h2>
+                <div>
+                    <input 
+                        type="text" 
+                        placeholder="Nombre (Obligatorio)" 
+                        name='nombre' 
+                        value={formData.nombre} 
+                        onChange={modificarInput} 
+                        required=""
+                    />
+                    {errors.nombre && <p className="error-message">{errors.nombre}</p>}
+                </div>
+                <div>
+                    <input 
+                        type="text" 
+                        placeholder="Ubicacion (Obligatorio)" 
+                        name='ubicacion' 
+                        value={formData.ubicacion} 
+                        onChange={modificarInput} 
+                        required=""
+                    />
+                    {errors.ubicacion && <p className="error-message">{errors.ubicacion}</p>}
+                </div>
+                <div>
+                    <input 
+                        type="text" 
+                        placeholder="Telefono (Obligatorio)"  
+                        name='telefono' 
+                        value={formData.telefono} 
+                        onChange={modificarInput} 
+                        pattern="[0-9]*" 
+                        maxLength={10}
+                        required=""
+                    />
+                    {errors.telefono && <p className="error-message">{errors.telefono}</p>}
+                </div>
+                <input 
+                    type="submit" 
+                    value="Enviar" 
+                />
+            </form>  
+        </div>
     );
 };
 
