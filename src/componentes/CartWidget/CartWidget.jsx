@@ -10,7 +10,7 @@ function CartWidget() {
     return (
         <Link to="/cart"> 
             <div className='icono'>
-                <p><IoMdCart />()</p>
+                <p><IoMdCart />({carrito.length})</p>
             </div>
         </Link>
     );
