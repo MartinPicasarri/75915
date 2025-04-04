@@ -2,14 +2,16 @@ import { useEffect, useState } from 'react';
 import { fetchData } from '../../fetchData';
 import Item from '../Item/Item';
 import Loader from '../Loader/Loader';
-// import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
+import { db } from '../../firebaseConfig';
+import { collection, addDoc } from 'firebase/firestore';
+import { productos } from '../../productos';
 
 function ItemListContainer() {
 
-    const [todosLosProductos, setTodosLosProductos] = useState([]); // Este estado solo me va a servir como una especie de base de datos local en mi proyecto para no tener que seguir solicitando infinitas veces de acuerdo a los filtros que aplique. Si aplico el filtro de no mostrar productos, eventualmente puedo perder esa información. Así que acá tenemos un backup
-    const [misProductos, setMisProductos] = useState([]); // Los productos que vamos a mostrar
+    const [todosLosProductos, setTodosLosProductos] = useState([]); 
+    const [misProductos, setMisProductos] = useState([]); 
     const [loading, setLoading] = useState(true);
 
     const { categoria } = useParams();
@@ -39,8 +41,18 @@ function ItemListContainer() {
 
     }, [categoria]);
 
+    /*const cargarMuchosProductos = () => {
+        const refCollection = collection(db, 'productos');
+
+        productos.forEach( (elemento) => {
+            addDoc(refCollection, elemento);
+        });
+    };*/
+
     return (
         <>
+            {/*<button onClick={cargarMuchosProductos}>Cargar muchos productos</button> */}
+
             <div className="container-cards">
                 {
                     loading ? <Loader /> :
