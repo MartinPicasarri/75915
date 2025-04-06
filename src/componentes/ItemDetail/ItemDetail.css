@@ -1,5 +1,5 @@
 .body-detail {
-    background-image: url(/src/Images/mimuopis.png);
+    background-image: url(https://res.cloudinary.com/dkymtbe7c/image/upload/v1743777201/mimuopis_sdi2gg.png);
     background-repeat: round;
     height: 30rem;
 }
@@ -35,6 +35,11 @@
 
 .card-detail p {
     font-family: sans-serif;
+}
+
+.card-detail img {
+    width: 20rem;
+    height: 20rem;
 }
 
 .card-detail h2:hover {

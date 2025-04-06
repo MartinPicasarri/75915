@@ -19,14 +19,14 @@ function Checkout() {
     });
 
     const modificarInput = (e) => {
-        const { value, name } = e.target;
+        const { value, nombre } = e.target;
         
         setErrors({
             ...errors,
-            [name]: ""
+            [nombre]: ""
         });
 
-        if (name === 'telefono') {
+        if (nombre === 'telefono') {
             if (!/^\d*$/.test(value)) {
                 setErrors({
                     ...errors,
@@ -38,7 +38,7 @@ function Checkout() {
 
         setFormData({
             ...formData,
-            [name]: value,
+            [nombre]: value,
         });
     };
 
