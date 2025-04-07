@@ -6,8 +6,7 @@ function Navbar() {
     return (
         <header>
             <nav className="nav-bar">
-                <p>LOGO</p>
-                
+                <img src="https://res.cloudinary.com/dkymtbe7c/image/upload/v1743777201/mimuopis_sdi2gg.png" alt="" />
                 <ul className="navbar-list">
                     <li className="nav-bar-item">
                         <Link to="/">

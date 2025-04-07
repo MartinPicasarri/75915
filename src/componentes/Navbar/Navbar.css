@@ -8,8 +8,11 @@ body {
     background-color: rgb(167, 21, 21);
     height: 7rem;
     width: 100%;
-    justify-content: space-around;
     align-items: center;
+}
+
+.nav-bar img {
+    width: 20rem;
 }
 
 .navbar-list {
