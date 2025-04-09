@@ -8,20 +8,28 @@ import { collection, getDoc, doc } from "firebase/firestore"
 
 function ItemDetail() {
   const [item, setItem] = useState({})
+  const [loading, setLoading] = useState(true)
   const { id } = useParams()
   const { agregarAlCarrito, contador } = useAppContext()
 
   useEffect(() => {
-    const refCollection = collection(db, "productos")
-    const refDoc = doc(refCollection, id)
-    getDoc(refDoc).then((res) => {
-      setItem({ id: res.id, ...res.data() })
-    })
+    const timer = setTimeout(() => {
+      const refCollection = collection(db, "productos")
+      const refDoc = doc(refCollection, id)
+      getDoc(refDoc).then((res) => {
+        setItem({ id: res.id, ...res.data() })
+        setLoading(false)
+      })
+    }, 3000); 
+
+    return () => clearTimeout(timer); 
   }, [id])
 
   const stock = item.stock ? Number.parseInt(item.stock) : 12
 
-  return item.id ? (
+  return loading ? (
+    <p><span className="loader"></span></p>
+  ) : item.id ? (
     <div className="body-detail">
       <div className="card-detail">
         <h2>{item.nombre || "NO DISPONIBLE"}</h2>
@@ -54,9 +62,8 @@ function ItemDetail() {
       </div>
     </div>
   ) : (
-    <p>Cargando producto...</p>
+    <p>Error al cargar el producto.</p>
   )
 }
 
 export default ItemDetail
-
